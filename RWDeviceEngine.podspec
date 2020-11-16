@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "RWDeviceEngine"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.summary      = "自定义标签管理"
   spec.homepage     = "https://github.com/Rover001/RWDeviceEngine.git"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
@@ -14,6 +14,6 @@ Pod::Spec.new do |spec|
   #spec.resource     = 'RWAutoTagView/RWAutoTag.bundle'
   #spec.public_header_files = 'RWAutoTagView/*.h'
   #spec.frameworks = 'UIKit'
-  #spec.social_media_url = 'https://cocoapods.org/pods/RWAutoTagView'
+  spec.social_media_url = 'https://cocoapods.org/pods/RWDeviceEngine'
     
 end

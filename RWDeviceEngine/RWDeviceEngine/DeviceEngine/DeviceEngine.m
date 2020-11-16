@@ -61,6 +61,10 @@ static NSString *IPHONE_XSMAX_12_65_414_896_3_Y = @"iPhone_XS_Max";
 static NSString *IPHONE_11_1_61_414_896_2_201909 = @"iPhone_11";
 static NSString *IPHONE_11Pro_1_58_375_812_3_201909 = @"iPhone_11_Pro";
 static NSString *IPHONE_11ProMax_1_65_414_896_3_201909 = @"iPhone_11_ProMax";
+static NSString *IPHONE_12Mini_1_54_360_780_3_202010 = @"iPhone_12_Mini";
+static NSString *IPHONE_12_1_61_390_884_3_202010 = @"iPhone_12";
+static NSString *IPHONE_12Pro_1_61_390_884_3_202010 = @"iPhone_12_Pro";
+static NSString *IPHONE_12ProMax_1_67_428_926_3_202010 = @"iPhone_12_ProMax";
 
 static NSString *IPODTOUCH_M_1_35_320_480_1_NY = @"iPodTouch_1";
 static NSString *IPODTOUCH_M_2_35_320_480_1_NY = @"iPodTouch_2";
@@ -79,13 +83,16 @@ static NSString *IPAD_MINI_5_79_768_1024_2_201903 = @"iPadMini_5";
 static NSString *IPAD_AIR_1_97_768_1024_2_201310  = @"iPadAir_1";
 static NSString *IPAD_AIR_2_97_768_1024_2_201410  = @"iPadAir_2";
 static NSString *IPAD_AIR_3_105_834_1112_2_201903 = @"iPadAir_3";
+static NSString *IPAD_AIR_4_974_820_1180_2_202009 = @"iPadAir_4";
 
 static NSString *IPAD_PRO_1_97_768_1024_2_201603   = @"iPadPro_9.7_1";
 static NSString *IPAD_PRO_1_105_834_1112_2_201706  = @"iPadPro_10.5_1";
 static NSString *IPAD_PRO_1_11_834_1194_2_201809   = @"iPadPro_11_1";
+static NSString *IPAD_PRO_2_11_834_1194_2_202010   = @"iPadPro_11_2";
 static NSString *IPAD_PRO_1_129_1024_1366_2_201509 = @"iPadPro_12.9_1";
 static NSString *IPAD_PRO_2_129_1024_1366_2_201706 = @"iPadPro_12.9_2";
 static NSString *IPAD_PRO_3_129_1024_1366_2_201809 = @"iPadPro_12.9_3";
+static NSString *IPAD_PRO_4_129_1024_1366_2_202010 = @"iPadPro_12.9_4";
 
 static NSString *IPAD_M_1_97_768_1024_1_201003 = @"iPad_9.7_1";
 static NSString *IPAD_M_2_97_768_1024_1_201103 = @"iPad_9.7_2";
@@ -93,6 +100,8 @@ static NSString *IPAD_M_3_97_768_1024_2_201203 = @"iPad_9.7_3";
 static NSString *IPAD_M_4_97_768_1024_2_201603 = @"iPad_9.7_4";
 static NSString *IPAD_M_5_97_768_1024_2_201703 = @"iPad_9.7_5";
 static NSString *IPAD_M_6_97_768_1024_2_201803 = @"iPad_9.7_6";
+static NSString *IPAD_M_7_98_810_1080_2_201909 = @"iPad_9.7_7";
+static NSString *IPAD_M_8_98_810_1080_2_201909 = @"iPad_9.7_8";
 
 
 static NSString *Simulator_I386 = @"i386";
@@ -285,6 +294,14 @@ static DeviceEngine *_defaultDeviceEngine = nil;
             name = IPHONE_11ProMax_1_65_414_896_3_201909;
         else if ([model isEqualToString:@"iPhone12,8"])
             name = IPHONE_SE2_9_47_375_667_2_202004;
+        else if ([model isEqualToString:@"iPhone13,1"])
+            name = IPHONE_12Mini_1_54_360_780_3_202010;
+        else if ([model isEqualToString:@"iPhone13,2"])
+            name = IPHONE_12_1_61_390_884_3_202010;
+        else if ([model isEqualToString:@"iPhone13,3"])
+            name = IPHONE_12Pro_1_61_390_884_3_202010;
+        else if ([model isEqualToString:@"iPhone13,4"])
+            name = IPHONE_12ProMax_1_67_428_926_3_202010;
         
         
         else if ([model isEqualToString:@"iPod1,1"])
@@ -323,6 +340,14 @@ static DeviceEngine *_defaultDeviceEngine = nil;
         else if ([model isEqualToString:@"iPad7,5"] ||
                  [model isEqualToString:@"iPad7,6"])
             name = IPAD_M_6_97_768_1024_2_201803;
+        else if ([model isEqualToString:@"iPad7,12"] ||
+                 [model isEqualToString:@"iPad7,11"])
+            name = IPAD_M_7_98_810_1080_2_201909;
+        else if ([model isEqualToString:@"iPad11,6"] ||
+             [model isEqualToString:@"iPad11,7"])
+            name = IPAD_M_8_98_810_1080_2_201909;
+        
+        
         else if ([model isEqualToString:@"iPad4,1"] ||
                  [model isEqualToString:@"iPad4,2"] ||
                  [model isEqualToString:@"iPad4,3"])
@@ -333,6 +358,11 @@ static DeviceEngine *_defaultDeviceEngine = nil;
         else if ([model isEqualToString:@"iPad11,3"] ||
                  [model isEqualToString:@"iPad11,4"])
             name = IPAD_AIR_3_105_834_1112_2_201903;
+        else if ([model isEqualToString:@"iPad13,1"] ||
+             [model isEqualToString:@"iPad13,2"])
+            name = IPAD_AIR_4_974_820_1180_2_202009;
+        
+        
         else if ([model isEqualToString:@"iPad6,3"] ||
                  [model isEqualToString:@"iPad6,4"])
             name = IPAD_PRO_1_97_768_1024_2_201603;
@@ -350,11 +380,19 @@ static DeviceEngine *_defaultDeviceEngine = nil;
                  [model isEqualToString:@"iPad8,3"] ||
                  [model isEqualToString:@"iPad8,4"])
             name = IPAD_PRO_1_11_834_1194_2_201809;
+        else if ([model isEqualToString:@"iPad8,9"] ||
+                 [model isEqualToString:@"iPad8,10"])
+            name = IPAD_PRO_2_11_834_1194_2_202010;
+        
         else if ([model isEqualToString:@"iPad8,5"] ||
                  [model isEqualToString:@"iPad8,6"] ||
                  [model isEqualToString:@"iPad8,7"] ||
                  [model isEqualToString:@"iPad8,8"])
             name = IPAD_PRO_3_129_1024_1366_2_201809;
+        else if ([model isEqualToString:@"iPad8,11"] ||
+                 [model isEqualToString:@"iPad8,12"])
+            name = IPAD_PRO_4_129_1024_1366_2_202010;
+        
         else if ([model isEqualToString:@"iPad2,5"] ||
                  [model isEqualToString:@"iPad2,6"] ||
                  [model isEqualToString:@"iPad2,7"])
@@ -544,6 +582,19 @@ static DeviceEngine *_defaultDeviceEngine = nil;
     return [self.machineModelName isEqualToString:IPHONE_11ProMax_1_65_414_896_3_201909];
 }
 
+- (BOOL)iPhone12Mini {
+    return [self.machineModelName isEqualToString:IPHONE_12Mini_1_54_360_780_3_202010];
+}
+- (BOOL)iPhone12 {
+    return [self.machineModelName isEqualToString:IPHONE_12_1_61_390_884_3_202010];
+}
+- (BOOL)iPhone12Pro {
+    return [self.machineModelName isEqualToString:IPHONE_12Pro_1_61_390_884_3_202010];
+}
+- (BOOL)iPhone12ProMax {
+    return [self.machineModelName isEqualToString:IPHONE_12ProMax_1_67_428_926_3_202010];
+}
+
 #pragma mark iPodTouch All
 
 - (BOOL)iPodTouch {
@@ -603,6 +654,14 @@ static DeviceEngine *_defaultDeviceEngine = nil;
     return [self.machineModelName isEqualToString:IPAD_M_6_97_768_1024_2_201803];
 }
 
+-(BOOL) iPad7 {
+    return [self.machineModelName isEqualToString:IPAD_M_7_98_810_1080_2_201909];
+}
+
+-(BOOL) iPad8 {
+    return [self.machineModelName isEqualToString:IPAD_M_8_98_810_1080_2_201909];
+}
+
 - (BOOL)iPadAir {
     return [self.machineModelName isEqualToString:IPAD_AIR_1_97_768_1024_2_201310];
 }
@@ -613,6 +672,10 @@ static DeviceEngine *_defaultDeviceEngine = nil;
 
 - (BOOL)iPadAir3 {
     return [self.machineModelName isEqualToString:IPAD_AIR_3_105_834_1112_2_201903];
+}
+
+- (BOOL)iPadAir4 {
+    return [self.machineModelName isEqualToString:IPAD_AIR_4_974_820_1180_2_202009];
 }
 
 - (BOOL)iPadPro97 {
@@ -627,6 +690,10 @@ static DeviceEngine *_defaultDeviceEngine = nil;
     return [self.machineModelName isEqualToString:IPAD_PRO_1_11_834_1194_2_201809];
 }
 
+- (BOOL)iPadPro11_2 {
+    return [self.machineModelName isEqualToString:IPAD_PRO_2_11_834_1194_2_202010];
+}
+
 - (BOOL)iPadPro129 {
     return [self.machineModelName isEqualToString:IPAD_PRO_1_129_1024_1366_2_201509];
 }
@@ -637,6 +704,10 @@ static DeviceEngine *_defaultDeviceEngine = nil;
 
 - (BOOL)iPadPro129_3 {
     return [self.machineModelName isEqualToString:IPAD_PRO_3_129_1024_1366_2_201809];
+}
+
+- (BOOL)iPadPro129_4 {
+    return [self.machineModelName isEqualToString:IPAD_PRO_4_129_1024_1366_2_202010];
 }
 
 - (BOOL)iPadMini {
@@ -796,6 +867,53 @@ static DeviceEngine *_defaultDeviceEngine = nil;
 }
 
 
+/**<🐱
+iPhone_360_780 开发尺寸,包含设备类型 （iphone类型）
+- (BOOL)iPhone12Mini;
+ 统一名称：- (BOOL)isiPhone12Mini;
+*/
+- (BOOL)iPhone_360_780 {
+    if ([self isSimulator]) {
+        if ([self isiPhone] ||[self isiPodTouch]) {
+            return [self deviceWidth:360.00 height:780.00];
+        }
+        return NO;
+    }
+    return [self iPhone12Mini];
+}
+
+/**<🐱
+iPhone_360_780 开发尺寸,包含设备类型 （iphone类型）
+- (BOOL)iPhone12;
+- (BOOL)iPhone12Pro;
+ 统一名称：- (BOOL)isiPhone12Pro;
+*/
+- (BOOL)iPhone_390_884 {
+    if ([self isSimulator]) {
+        if ([self isiPhone] ||[self isiPodTouch]) {
+            return [self deviceWidth:390.00 height:884.00];
+        }
+        return NO;
+    }
+    return [self iPhone12] || [self iPhone12Pro];
+}
+
+/**<🐱
+iPhone_428_926 开发尺寸,包含设备类型 （iphone类型）
+- (BOOL)iPhone12ProMax;
+ 统一名称：- (BOOL)isiPhone12ProMax;
+*/
+- (BOOL)iPhone_428_926 {
+    if ([self isSimulator]) {
+        if ([self isiPhone] ||[self isiPodTouch]) {
+            return [self deviceWidth:428.00 height:926.00];
+        }
+        return NO;
+    }
+    return [self iPhone12ProMax];
+}
+
+
 - (BOOL)isiPhone4s {
     return [self iPhone_320_480];
 }
@@ -824,8 +942,19 @@ static DeviceEngine *_defaultDeviceEngine = nil;
     return [self iPhone_414_896];
 }
 
+- (BOOL)isiPhone12Mini {
+    return [self iPhone_360_780];
+}
+- (BOOL)isiPhone12Pro {
+    return [self iPhone_390_884];
+}
+- (BOOL)isiPhone12ProMax {
+    return [self iPhone_428_926];
+}
+
 - (BOOL)iPhone_FullScreen {
-   return [self isiPhoneFullScreen] || [self isiPhoneFullScreenPlus];
+   return [self isiPhoneFullScreen] || [self isiPhoneFullScreenPlus] || [self isiPhone12Mini] ||
+    [self isiPhone12Pro] || [self isiPhone12ProMax];
 }
 
 - (BOOL)iPhone_Plus {
@@ -906,6 +1035,22 @@ static DeviceEngine *_defaultDeviceEngine = nil;
 }
 
 /**<🐱
+ ipad_820_1180 开发尺寸,包含设备类型 （ipad类型）
+ - (BOOL)iPadAir4;
+ 
+ */
+- (BOOL)ipad_820_1180 {
+    if ([self isSimulator]) {
+        if ([self isiPad]) {
+            return [self deviceWidth:820.00 height:1180.00];
+        }
+        return NO;
+    }
+    
+    return [self iPadAir4];
+}
+
+/**<🐱
  ipad_1024_1136 开发尺寸
  包含设备类型 （ipad类型）
  - (BOOL)iPadPro129;
@@ -950,7 +1095,7 @@ static DeviceEngine *_defaultDeviceEngine = nil;
         }
         return NO;
     }
-    return [self iPadPro129_3] || [self iPadPro11];
+    return [self iPadPro129_3] || [self iPadPro129_4] || [self iPadPro11] || [self iPadAir4];
 }
 
 
