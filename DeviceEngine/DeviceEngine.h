@@ -113,6 +113,10 @@ IOS_13以上 '- (UISceneConfiguration *)application:(UIApplication *)application
 - (BOOL)iPhone11;
 - (BOOL)iPhone11Pro;
 - (BOOL)iPhone11ProMax;
+- (BOOL)iPhone12Mini;/* 🐱 5.4_360*780(1080*2688)_@3x_202010 */
+- (BOOL)iPhone12;/* 🐱 6.1_390*844(1170*2532)_@3x_202010 */
+- (BOOL)iPhone12Pro;/* 🐱 6.1_390*844(1170*2532)_@3x_202010 */
+- (BOOL)iPhone12ProMax;/* 🐱 6.7_428*926(1284*2778)_@3x_202010 */
  
 
 #pragma mark -- iPodTouchAll touch类型
@@ -131,15 +135,20 @@ IOS_13以上 '- (UISceneConfiguration *)application:(UIApplication *)application
 - (BOOL)iPad4;
 - (BOOL)iPad5;
 - (BOOL)iPad6;
+- (BOOL)iPad7;
+- (BOOL)iPad8;
 - (BOOL)iPadAir;
 - (BOOL)iPadAir2;
 - (BOOL)iPadAir3;
+- (BOOL)iPadAir4;
 - (BOOL)iPadPro129;
 - (BOOL)iPadPro129_2;
 - (BOOL)iPadPro129_3;
+- (BOOL)iPadPro129_4;
 - (BOOL)iPadPro97;
 - (BOOL)iPadPro105;
 - (BOOL)iPadPro11;
+- (BOOL)iPadPro11_2;
 - (BOOL)iPadMini;
 - (BOOL)iPadMini2;
 - (BOOL)iPadMini3;
@@ -230,6 +239,30 @@ IOS_13以上 '- (UISceneConfiguration *)application:(UIApplication *)application
  */
 - (BOOL)iPhone_414_896;
 
+
+/**<🐱
+iPhone_360_780 开发尺寸,包含设备类型 （iphone类型）
+- (BOOL)iPhone12Mini;
+ 统一名称：- (BOOL)isiPhone12Mini;
+*/
+- (BOOL)iPhone_360_780;
+
+/**<🐱
+iPhone_360_780 开发尺寸,包含设备类型 （iphone类型）
+- (BOOL)iPhone12;
+- (BOOL)iPhone12Pro;
+ 统一名称：- (BOOL)isiPhone12Pro;
+*/
+- (BOOL)iPhone_390_884;
+
+/**<🐱
+iPhone_428_926 开发尺寸,包含设备类型 （iphone类型）
+- (BOOL)iPhone12ProMax;
+ 统一名称：- (BOOL)isiPhone12ProMax;
+*/
+- (BOOL)iPhone_428_926;
+
+
 - (BOOL)isiPhone4s;
 - (BOOL)isiPhone5;
 - (BOOL)isiPhone6;
@@ -238,6 +271,9 @@ IOS_13以上 '- (UISceneConfiguration *)application:(UIApplication *)application
 - (BOOL)isiPhoneXPlus DEPRECATED_MSG_ATTRIBUTE("Please use isiPhoneFullScreenPlus");
 - (BOOL)isiPhoneFullScreen;
 - (BOOL)isiPhoneFullScreenPlus;
+- (BOOL)isiPhone12Mini;
+- (BOOL)isiPhone12Pro;
+- (BOOL)isiPhone12ProMax;
 
 - (BOOL)iPhone_FullScreen;/*🐱 手机是否是全面屏 isiPhoneFullScreen isiPhoneFullScreenPlus */
 - (BOOL)iPhone_Plus;/*🐱 手机是否是Plus机型 isiPhonePlus  isiPhoneFullScreenPlus */
@@ -275,16 +311,25 @@ IOS_13以上 '- (UISceneConfiguration *)application:(UIApplication *)application
 /**<🐱
  ipad_834_1194 开发尺寸,包含设备类型 （ipad类型）
  - (BOOL)iPadPro11;
+ - (BOOL)iPadPro11_2;
  
  统一名称：- (BOOL)isiPadPro11;
  */
 - (BOOL)ipad_834_1194;
 
 /**<🐱
+ ipad_820_1180 开发尺寸,包含设备类型 （ipad类型）
+ - (BOOL)iPadAir4;
+
+ */
+- (BOOL)ipad_820_1180;
+
+/**<🐱
  ipad_1024_1136 开发尺寸,包含设备类型 （ipad类型）
  - (BOOL)iPadPro129;
  - (BOOL)iPadPro129_2;
  - (BOOL)iPadPro129_3;
+ - (BOOL)iPadPro129_4;
  
  统一名称：- (BOOL)isiPadPro129;
  */
@@ -298,8 +343,10 @@ IOS_13以上 '- (UISceneConfiguration *)application:(UIApplication *)application
 
 /**<🐱
  ipad是否是全面屏
+ iPadAir4
  isiPadPro11
  iPadPro129_3
+ iPadPro129_4
  
  统一名称：- (BOOL)iPad_FullScreen;
  */
@@ -319,6 +366,7 @@ IOS_13以上 '- (UISceneConfiguration *)application:(UIApplication *)application
 - (CGFloat)deviceHeight;/**<🐱 设备高度 */
 - (CGFloat)deviceWidth;/**<🐱 设备宽度 */
 - (CGFloat)deviceScale;/**<🐱  */
+
 
 - (CGFloat)deviceStatusBarHeight;/**<🐱 状态栏高度 */
 - (BOOL)devicieStatusBarIsHidden;/**<🐱 状态栏是否隐藏 */

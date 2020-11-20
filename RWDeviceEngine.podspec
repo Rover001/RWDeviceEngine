@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "RWDeviceEngine"
-  spec.version      = "0.0.2"
+  spec.version      = "0.0.3"
   spec.summary      = "自定义标签管理"
   spec.homepage     = "https://github.com/Rover001/RWDeviceEngine.git"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
